@@ -1,0 +1,14 @@
+{
+  "products":
+  [
+    {
+      "name":"carrots",
+      "price":"2"
+    },
+    {
+      "name":"chips",
+      "price":"1"
+    }
+  ],
+  "email":"johdoe@nomail.com"
+}

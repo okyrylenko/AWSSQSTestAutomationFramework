@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: tests.CustomerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 6.904 sec <<< FAILURE!
+ShouldLinkPurchaseHistoryToNewEmail(tests.CustomerTest)  Time elapsed: 0.011 sec  <<< FAILURE!
+java.nio.file.NoSuchFileException: src/test/java/testdata/purachase.json
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:375)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:426)
+	at java.base/java.nio.file.Files.readAllBytes(Files.java:3272)
+	at core.helpers.LocalFileReader.readFile(LocalFileReader.java:11)
+	at core.helpers.LocalFileReader.getPurchase(LocalFileReader.java:19)
+	at core.helpers.LocalDataRepository.getPurchase(LocalDataRepository.java:16)
+	at tests.CustomerTest.ShouldLinkPurchaseHistoryToNewEmail(CustomerTest.java:54)
+
+ShouldPostMessageInSQSWhenNewCustomerCreated(tests.CustomerTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.nio.file.NoSuchFileException: src/test/java/testdata/customer.json
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:375)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:426)
+	at java.base/java.nio.file.Files.readAllBytes(Files.java:3272)
+	at core.helpers.LocalFileReader.readFile(LocalFileReader.java:11)
+	at core.helpers.LocalFileReader.getCustomer(LocalFileReader.java:15)
+	at core.helpers.LocalDataRepository.getCustomer(LocalDataRepository.java:12)
+	at tests.CustomerTest.ShouldPostMessageInSQSWhenNewCustomerCreated(CustomerTest.java:41)
+
